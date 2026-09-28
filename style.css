@@ -1,0 +1,733 @@
+/* =====================================================
+   GOOGLE FONT
+===================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+
+  border: none;
+  outline: none;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  background: #000;
+  color: #fff;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 80px;
+
+  padding: 0 9%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(0, 0, 0, 0.88);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(183, 75, 75, 0.25);
+
+  z-index: 1000;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+  font-size: 3rem;
+
+  font-weight: 800;
+
+  color: #b74b4b;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  text-shadow: 0 0 15px rgba(183, 75, 75, 0.4);
+}
+
+
+.logo:hover {
+  transform: scale(1.08);
+
+  text-shadow:
+    0 0 15px #b74b4b,
+    0 0 30px #b74b4b;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+
+nav a {
+  position: relative;
+
+  margin-left: 3.5rem;
+
+  font-size: 1.6rem;
+
+  font-weight: 500;
+
+  color: #fff;
+
+  transition: 0.3s ease;
+}
+
+
+/* Underline */
+
+nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 2px;
+
+  background: #b74b4b;
+
+  transition: 0.3s ease;
+}
+
+
+nav a:hover,
+nav a.active {
+  color: #b74b4b;
+}
+
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
+
+.menu-btn {
+  display: none;
+
+  width: 45px;
+  height: 45px;
+
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  color: #b74b4b;
+
+  border: 2px solid #b74b4b;
+
+  border-radius: 10px;
+
+  font-size: 2rem;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.menu-btn:hover {
+  background: #b74b4b;
+
+  color: #000;
+
+  box-shadow: 0 0 20px #b74b4b;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+section {
+  min-height: 100vh;
+
+  padding: 10rem 9% 5rem;
+}
+
+
+/* =====================================================
+   HOME
+===================================================== */
+
+.home {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8rem;
+
+  background: #000;
+}
+
+
+/* =====================================================
+   HOME IMAGE
+===================================================== */
+
+.home-img {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+.home-img img {
+  width: 32vw;
+
+  max-width: 420px;
+
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 3px solid #b74b4b;
+
+  box-shadow:
+    0 0 25px #b74b4b,
+    0 0 60px rgba(183, 75, 75, 0.35);
+
+  cursor: pointer;
+
+  transition: 0.4s ease;
+}
+
+
+.home-img img:hover {
+  transform: scale(1.04);
+
+  box-shadow:
+    0 0 35px #b74b4b,
+    0 0 80px rgba(183, 75, 75, 0.5);
+}
+
+
+/* =====================================================
+   HOME CONTENT
+===================================================== */
+
+.home-content {
+  max-width: 650px;
+}
+
+
+.home-content h1 {
+  font-size: 6rem;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+.home-content h1 span {
+  color: #b74b4b;
+}
+
+
+/* =====================================================
+   TYPING TEXT
+===================================================== */
+
+.typing-text {
+  margin: 1rem 0;
+
+  font-size: 3.5rem;
+
+  font-weight: 600;
+}
+
+
+.typing-text span {
+  color: #b74b4b;
+
+  border-right: 3px solid #b74b4b;
+
+  padding-right: 5px;
+
+  animation: blinkCursor 0.7s infinite;
+}
+
+
+/* Cursor */
+
+@keyframes blinkCursor {
+
+  50% {
+    border-color: transparent;
+  }
+
+}
+
+
+/* =====================================================
+   PARAGRAPH
+===================================================== */
+
+.home-content p {
+  max-width: 600px;
+
+  font-size: 1.6rem;
+
+  line-height: 1.7;
+
+  color: #ccc;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.social-icons {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  margin: 2.5rem 0;
+}
+
+
+.social-icons a {
+  display: inline-flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 4.5rem;
+  height: 4.5rem;
+
+  margin-right: 1.2rem;
+
+  border: 2px solid #b74b4b;
+
+  border-radius: 50%;
+
+  color: #b74b4b;
+
+  font-size: 2rem;
+
+  transition: 0.3s ease;
+}
+
+
+.social-icons a:hover {
+  color: #000;
+
+  background: #b74b4b;
+
+  transform: translateY(-6px) scale(1.08);
+
+  box-shadow: 0 0 25px #b74b4b;
+}
+
+
+/* =====================================================
+   HIRE ME BUTTON
+===================================================== */
+
+.btn {
+  display: inline-block;
+
+  padding: 1.2rem 3rem;
+
+  background: transparent;
+
+  color: #b74b4b;
+
+  border: 2px solid #b74b4b;
+
+  border-radius: 4rem;
+
+  font-size: 1.6rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2rem;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.btn:hover {
+  background: #b74b4b;
+
+  color: #000;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 0 25px #b74b4b;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  header {
+    padding: 0 5%;
+  }
+
+
+  section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+
+  .home {
+    gap: 4rem;
+  }
+
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+
+  .typing-text {
+    font-size: 3rem;
+  }
+
+
+  .home-img img {
+    width: 35vw;
+  }
+
+
+  nav a {
+    margin-left: 2rem;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+
+  header {
+    height: 70px;
+
+    padding: 0 6%;
+
+    background: rgba(0, 0, 0, 0.96);
+  }
+
+
+  .logo {
+    font-size: 2.5rem;
+  }
+
+
+  /* Show menu */
+
+  .menu-btn {
+    display: flex;
+  }
+
+
+  /* MOBILE NAV */
+
+  nav {
+    position: absolute;
+
+    top: 70px;
+    right: 5%;
+
+    width: 90%;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 1.5rem;
+
+    background: rgba(20, 20, 20, 0.98);
+
+    border: 1px solid #b74b4b;
+
+    border-radius: 15px;
+
+    box-shadow:
+      0 10px 35px rgba(183, 75, 75, 0.2);
+  }
+
+
+  nav.active {
+    display: flex;
+  }
+
+
+  nav a {
+    margin: 0;
+
+    padding: 1.5rem;
+
+    font-size: 1.7rem;
+
+    text-align: center;
+
+    border-radius: 10px;
+  }
+
+
+  nav a::after {
+    display: none;
+  }
+
+
+  nav a:hover,
+  nav a.active {
+    background: rgba(183, 75, 75, 0.12);
+
+    color: #b74b4b;
+  }
+
+
+  /* SECTION */
+
+  section {
+    padding: 9rem 6% 4rem;
+  }
+
+
+  /* HOME */
+
+  .home {
+    min-height: 100vh;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 3rem;
+  }
+
+
+  .home-img {
+    order: 1;
+  }
+
+
+  .home-content {
+    order: 2;
+
+    width: 100%;
+  }
+
+
+  /* IMAGE */
+
+  .home-img img {
+    width: 65vw;
+
+    max-width: 300px;
+  }
+
+
+  /* TITLE */
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+
+
+  /* TYPING */
+
+  .typing-text {
+    font-size: 2.5rem;
+
+    min-height: 4rem;
+  }
+
+
+  /* PARAGRAPH */
+
+  .home-content p {
+    font-size: 1.5rem;
+
+    line-height: 1.7;
+  }
+
+
+  /* SOCIAL */
+
+  .social-icons {
+    justify-content: center;
+  }
+
+
+  .social-icons a {
+    width: 4.2rem;
+    height: 4.2rem;
+
+    margin: 0.6rem;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 480px) {
+
+  header {
+    height: 65px;
+
+    padding: 0 5%;
+  }
+
+
+  .logo {
+    font-size: 2.2rem;
+  }
+
+
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+
+    font-size: 1.8rem;
+  }
+
+
+  nav {
+    top: 65px;
+
+    right: 4%;
+
+    width: 92%;
+  }
+
+
+  nav a {
+    padding: 1.3rem;
+
+    font-size: 1.6rem;
+  }
+
+
+  section {
+    padding-top: 8rem;
+  }
+
+
+  .home {
+    gap: 2.5rem;
+  }
+
+
+  .home-img img {
+    width: 70vw;
+
+    max-width: 280px;
+  }
+
+
+  .home-content h1 {
+    font-size: 3.4rem;
+  }
+
+
+  .typing-text {
+    font-size: 2.2rem;
+
+    min-height: 3.5rem;
+  }
+
+
+  .home-content p {
+    font-size: 1.4rem;
+  }
+
+
+  .social-icons a {
+    width: 4rem;
+    height: 4rem;
+
+    font-size: 1.7rem;
+  }
+
+
+  .btn {
+    padding: 1rem 2.5rem;
+
+    font-size: 1.4rem;
+  }
+
+}
